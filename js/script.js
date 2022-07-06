@@ -161,8 +161,8 @@ APNG.ifNeeded().then(function () {
 
 // 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
-    PageTopAnime();//機能編 8-1-8	リンクボタンをクリックしたら形状が変化の関数を呼ぶ
-	fadeAnime();//印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
+    PageTopAnime();
+	fadeAnime();
 });
 
 
@@ -172,7 +172,7 @@ $(window).on('load',function(){
     $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 
     //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-	$("#splash").delay(1500).fadeOut('slow',function(){
+	$("#splash").delay(300).fadeOut('slow',function(){
 
 		$('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
 
@@ -182,7 +182,7 @@ $(window).on('load',function(){
 			"animation-name":"backBoxAnime"//animation-nameを定義
 		});
 
-        PageTopAnime();//機能編 8-1-8	リンクボタンをクリックしたら形状が変化の関数を呼ぶの関数を呼ぶ
+        PageTopAnime();
 
     });
     //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
@@ -191,7 +191,7 @@ $(window).on('load',function(){
 
     //=====ここから背景が伸びた後に動かしたいJSをまとめる
     $('.splashbg').on('animationend', function() {
-        fadeAnime();//印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
+        fadeAnime();
     });
     //=====ここまで背景が伸びた後に動かしたいJSをまとめる
 
